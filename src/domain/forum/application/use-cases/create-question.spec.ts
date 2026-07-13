@@ -5,7 +5,10 @@ import { CreateQuestionUseCase } from "./create-question";
 
 
 const fakeQuestionsRepository: QuestionsRepository = {
-  create: async (question: Question) => { }
+  create: async (question: Question) => { },
+  findBySlug: function (slug: string): Promise<Question | null> {
+    throw new Error("Function not implemented.");
+  }
 }
 
 test('create a question', async () => {
