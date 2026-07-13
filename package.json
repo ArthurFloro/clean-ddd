@@ -16,7 +16,9 @@
     "vitest": "^4.1.10"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^26.1.1",
+    "eslint": "^8.57.1",
     "typescript": "^7.0.2"
   }
 }
