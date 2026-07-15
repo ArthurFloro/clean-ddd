@@ -1,40 +1,17 @@
-import { Entity } from "../../../../core/entities/entity"
 import type { UniqueEntityID } from "../../../../core/entities/unique-entity-id"
 import type { Optional } from "../../../../core/types/optiona"
+import { Comment, type CommentProps } from "./comment"
 
 
-export interface AnswerCommentProps {
-  authorId: UniqueEntityID
+
+export interface AnswerCommentProps extends CommentProps {
   answerId: UniqueEntityID
-  content: string
-  createdAt: Date
-  updatedAt?: Date
 }
 
-export class AnswerComment extends Entity<AnswerCommentProps> {
-  get authorId() {
-    return this.props.authorId
-  }
+export class AnswerComment extends Comment<AnswerCommentProps> {
 
-  get content() {
-    return this.props.content
-  }
-
-  get createdAt() {
-    return this.props.createdAt
-  }
-
-  get updatedAt() {
-    return this.props.updatedAt
-  }
-
-  private touch() {
-    this.props.updatedAt = new Date()
-  }
-
-  set content(content: string) {
-    this.props.content = content
-    this.touch()
+  get answerId() {
+    return this.props.answerId
   }
 
   static create(
@@ -51,4 +28,6 @@ export class AnswerComment extends Entity<AnswerCommentProps> {
 
     return answerComment
   }
+
+
 }
