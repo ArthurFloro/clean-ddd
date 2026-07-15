@@ -1,24 +1,24 @@
-import { expect, test } from "vitest";
-import type { Question } from "../../enterprise/entities/questions";
-import type { QuestionsRepository } from "../repositories/questions-repository";
+import { beforeEach, describe, expect, it } from "vitest";
 import { CreateQuestionUseCase } from "./create-question";
+import { InMemoryQuestionsRepository } from "../../../../../test/repositories/in-memory-questions-repository";
 
+let inMemoryQuestionsRepository: InMemoryQuestionsRepository
+let sut: CreateQuestionUseCase
 
-const fakeQuestionsRepository: QuestionsRepository = {
-  create: async (question: Question) => { },
-  findBySlug: function (slug: string): Promise<Question | null> {
-    throw new Error("Function not implemented.");
-  }
-}
-
-test('create a question', async () => {
-  const createQuestion = new CreateQuestionUseCase(fakeQuestionsRepository)
-
-  const { question } = await createQuestion.execute({
-    authorId: '1',
-    title: 'Nova pergunta',
-    content: 'Conteúdo da pergunta'
+describe('Create Question', () => {
+  beforeEach(() => {
+    inMemoryQuestionsRepository = new InMemoryQuestionsRepository()
+    sut = new CreateQuestionUseCase(inMemoryQuestionsRepository)
   })
 
-  expect(question.id).toBeTruthy()
+  it('should be able to create a question', async () => {
+    const result = await sut.execute({
+      authorId: '1',
+      title: 'Nova pergunta',
+      content: 'Conteúdo da pergunta',
+    })
+
+    expect(result.isRight()).toBe(true)
+    expect(inMemoryQuestionsRepository.items[0]).toEqual(result.value?.question)
+  })
 })
