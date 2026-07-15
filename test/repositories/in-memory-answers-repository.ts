@@ -1,6 +1,7 @@
-import type { AnswersRepository } from "../src/domain/forum/application/repositories/answers-repository";
-import type { PaginationParams } from "../src/domain/forum/application/repositories/pagination-params";
-import type { Answer } from "../src/domain/forum/enterprise/entities/answer";
+import type { AnswersRepository } from "../../src/domain/forum/application/repositories/answers-repository"
+import type { PaginationParams } from "../../src/domain/forum/application/repositories/pagination-params"
+import type { Answer } from "../../src/domain/forum/enterprise/entities/answer"
+
 
 export class InMemoryAnswersRepository implements AnswersRepository {
   public items: Answer[] = []

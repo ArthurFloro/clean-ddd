@@ -1,6 +1,6 @@
 
 import { beforeEach, describe, expect, it } from 'vitest'
-import { InMemoryAnswersRepository } from '../../../../../test/in-memory-answers-repository'
+import { InMemoryAnswersRepository } from '../../../../../test/repositories/in-memory-answers-repository'
 import { EditAnswerUseCase } from './edit-answer'
 import { makeAnswer } from '../../../../../test/factories/make-answer'
 import { UniqueEntityID } from '../../../../core/entities/unique-entity-id'
