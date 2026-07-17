@@ -1,8 +1,9 @@
 import { right, type Either } from "../../../../core/either";
 import { UniqueEntityID } from "../../../../core/entities/unique-entity-id";
 import { QuestionAttachment } from "../../enterprise/entities/question-attachment";
+import { QuestionAttachmentList } from "../../enterprise/entities/question-attachment-list";
 import { Question } from "../../enterprise/entities/questions";
-import { QuestionAttachmentList } from "../../enterprise/question-attachment-list";
+
 import type { QuestionsRepository } from "../repositories/questions-repository";
 
 interface CreateQuestionsUseCaseRequest {

@@ -3,7 +3,7 @@ import type { UniqueEntityID } from "../../../../core/entities/unique-entity-id"
 import type { Optional } from "../../../../core/types/optiona"
 import dayjs from "dayjs"
 import { AggregateRoot } from "../../../../core/entities/aggregate-root"
-import { QuestionAttachmentList } from "../question-attachment-list"
+import { QuestionAttachmentList } from "./question-attachment-list"
 
 export interface QuestionProps {
     authorId: UniqueEntityID

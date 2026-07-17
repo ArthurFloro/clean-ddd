@@ -2,11 +2,11 @@ import { left, right, type Either } from "../../../../core/either"
 import { UniqueEntityID } from "../../../../core/entities/unique-entity-id"
 import { QuestionAttachment } from "../../enterprise/entities/question-attachment"
 import type { Question } from "../../enterprise/entities/questions"
-import { QuestionAttachmentList } from "../../enterprise/question-attachment-list"
 import type { QuestionAttachmentsRepository } from "../repositories/question-attachments-repository"
 import type { QuestionsRepository } from "../repositories/questions-repository"
 import { NotAllowedError } from "../../../../core/erros/errors/not-alowed-error"
 import { ResourceNotFoundError } from "../../../../core/erros/errors/resource-not-found-error"
+import { QuestionAttachmentList } from "../../enterprise/entities/question-attachment-list"
 
 interface EditQuestionUseCaseRequest {
   authorId: string
