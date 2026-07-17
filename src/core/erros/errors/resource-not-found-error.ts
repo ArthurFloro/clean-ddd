@@ -1,4 +1,5 @@
-import type { UseCaseError } from "../../../../../core/erros/use-case-error";
+import type { UseCaseError } from "../use-case-error";
+
 
 export class ResourceNotFoundError extends Error implements UseCaseError {
   constructor() {

@@ -3,7 +3,7 @@ import { InMemoryQuestionsRepository } from "../../../../../test/repositories/in
 import { EditQuestionUseCase } from "./edit-question"
 import { makeQuestion } from "../../../../../test/factories/make-question"
 import { UniqueEntityID } from "../../../../core/entities/unique-entity-id"
-import { NotAllowedError } from "./errors/not-alowed-error"
+import { NotAllowedError } from "../../../../core/erros/errors/not-alowed-error"
 import { makeQuestionAttachment } from "../../../../../test/factories/make-question-attachments"
 import { InMemoryQuestionAttachmentsRepository } from "../../../../../test/repositories/in-memory-question-attachments"
 

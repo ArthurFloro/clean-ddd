@@ -6,9 +6,10 @@ import { InMemoryAnswersRepository } from '../../../../../test/repositories/in-m
 import { InMemoryQuestionsRepository } from '../../../../../test/repositories/in-memory-questions-repository'
 import { UniqueEntityID } from '../../../../core/entities/unique-entity-id'
 import { ChooseQuestionBestAnswerUseCase } from './choose-question-best-asnwer'
-import { NotAllowedError } from './errors/not-alowed-error'
+
 import { InMemoryAnswerAttachmentsRepository } from '../../../../../test/repositories/in-memory-answer-attachments-repository'
 import { InMemoryQuestionAttachmentsRepository } from '../../../../../test/repositories/in-memory-question-attachments'
+import { NotAllowedError } from '../../../../core/erros/errors/not-alowed-error'
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository
 let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentsRepository

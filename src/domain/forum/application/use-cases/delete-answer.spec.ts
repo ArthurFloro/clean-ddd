@@ -3,7 +3,7 @@ import { InMemoryAnswersRepository } from '../../../../../test/repositories/in-m
 import { DeleteAnswerUseCase } from './delete-answer'
 import { UniqueEntityID } from '../../../../core/entities/unique-entity-id'
 import { makeAnswer } from '../../../../../test/factories/make-answer'
-import { NotAllowedError } from './errors/not-alowed-error'
+import { NotAllowedError } from '../../../../core/erros/errors/not-alowed-error'
 import { makeAnswerAttachment } from '../../../../../test/factories/make-answer-attachment'
 import { InMemoryAnswerAttachmentsRepository } from '../../../../../test/repositories/in-memory-answer-attachments-repository'
 

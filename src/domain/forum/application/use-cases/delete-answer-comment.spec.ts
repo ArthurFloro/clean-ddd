@@ -3,7 +3,8 @@ import { makeAnswerComment } from "../../../../../test/factories/make-answer-com
 import { InMemoryAnswerCommentsRepository } from "../../../../../test/repositories/in-memory-answer-comments"
 import { UniqueEntityID } from "../../../../core/entities/unique-entity-id"
 import { DeleteAnswerCommentUseCase } from "./delete-answer-comment"
-import { NotAllowedError } from "./errors/not-alowed-error"
+import { NotAllowedError } from "../../../../core/erros/errors/not-alowed-error"
+
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentsRepository
 let sut: DeleteAnswerCommentUseCase
